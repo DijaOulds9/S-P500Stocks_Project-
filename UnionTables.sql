@@ -33,9 +33,8 @@ SELECT
 
 # Voltality     
 #insight: the lower the better 
-# formula: srof daily return * standard dev
 select date, symbol,
-Close,ROUND(( close - Lag(close, 1) over (partition by symbol Order by date))/ (Lag(close, 1) Over (Partition by Symbol Order by Date)),2) As Daily_Return 
+Close, ROUND(( close - Lag(close, 1) over (partition by symbol Order by date))/ (Lag(close, 1) Over (Partition by Symbol Order by Date)),2) As Daily_Return 
 From Stocks_Data
 where symbol IN ("abbv", "acn", "aos")
 order by date, symbol;
