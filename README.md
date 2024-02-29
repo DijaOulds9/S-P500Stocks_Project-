@@ -1,1 +1,1 @@
-# S-P500Stocks_Project-
+# S&P500Stocks_Project-
